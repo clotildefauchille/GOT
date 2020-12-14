@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'fine_books';
+    src: url('../fonts/Fine\ Books.otf');
+}
+
+* {
+    font-family: 'Langar', cursive;
+    color: white;
+}
+
+body {
+    margin: 0 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: url('../images/cartes/knownWorld.jpg') left/cover no-repeat;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 3px white solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: auto;
+    height: 60%;
+    margin: 10px;
+}
+
+header ul {
+    margin-right: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header ul li {
+    display: block;
+    margin: 0 20px;
+    font-size: 1.2em;
+}
+
+header .details {
+    position: absolute;
+    width: 150px;
+    max-height: 450px;
+    overflow: auto;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+header .details a div {
+    position: relative;
+    margin: 10px 10px;
+    padding: 5px 0;
+    width: calc(100% - 20px);
+    text-align: center;
+    font-size: 1.1em;
+}
+
+header .details a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+header .details a div:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    position: relative;
+    height: calc(100% - 75px);
+}
+
+main .content {
+    position: relative;
+    top: 5%;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+.text {
+    text-indent: 20px;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.text::first-letter {
+    font-family: 'fine_books';
+    color: red;
+    font-size: 3em;
+}
+
+.text--small {
+    text-indent: 5px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.text--small::first-letter {
+    font-family: 'fine_books';
+    color: red;
+    font-size: 1.5em;
+}
+
+img.continent {
+    height: 500px;
+    width: auto;
+    margin: 20px auto;
+}
+
+.kingdom, .family {
+    width: 100%;
+    height: 400px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.kingdom img {
+    margin: 0 20px;
+    width: auto;
+    height: 100%;
+}
+
+.family img {
+    margin: 0 20px;
+    width: auto;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.family div {
+    height: 100%;
+    overflow: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: space-around;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+.small {
+    width: 150px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.small--very {
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+.small h3, .small--very h3 {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+hr {
+    display: block;
+    width: 75%;
+    color: white;
+    margin: 30px auto;
+}
+
+form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 1px solid white;
+    overflow: auto;
+}
+
+
+.form-input {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-input label {
+    width: 200px;
+    text-align: left;
+}
+
+.form-input input[type="text"] {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-input textarea {
+    width: 300px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-input input[type="text"]::placeholder {
+    color: white;
+}
+
+.radiogroup, .checkgroup {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 250px);
+}
+
+.radioitem, .checkitem {
+    width: 200px;
+}
+
+.form-button {
+    width: 150px;
+    min-height: 50px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+}
+
+.error {
+    text-align: center;
+    color: red;
+}

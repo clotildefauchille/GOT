@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Langar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Game of Thrones</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/">
+          <img src="../../images/logo.png" alt="Trône de fer" class="logo" />
+        </a>
+        <ul>
+          <li class="menu" id="continents">Continents</li>
+          <li class="menu" id="kingdoms">Royaumes</li>
+          <li class="menu" id="families">Familles</li>
+          <li class="menu" id="ajouter">Ajouter...</li>
+        </ul>
+        <div class="details details--continents">
+          <!-- à dynamiser-->
+          <a href="#"><div>Essos</div></a>
+
+          <a href="#"><div>Westeros</div></a>
+        </div>
+        <div class="details details--kingdoms">
+          <!-- à dynamiser-->
+          <a href="#"><div>Bief</div></a>
+
+          <a href="#"><div>Braavos</div></a>
+
+          <a href="#"><div>Conflans</div></a>
+
+          <a href="#"><div>Dorne</div></a>
+
+          <a href="#"><div>Iles de Fer</div></a>
+
+          <a href="#"><div>Lorath</div></a>
+
+          <a href="#"><div>Lys</div></a>
+
+          <a href="#"><div>Myr</div></a>
+
+          <a href="#"><div>Nord</div></a>
+
+          <a href="#"><div>Norvos</div></a>
+
+          <a href="#"><div>Pentos</div></a>
+
+          <a href="#"><div>Qohor</div></a>
+
+          <a href="#"><div>Terres de l&#39;Orage</div></a>
+
+          <a href="#"><div>Terres de l&#39;Ouest</div></a>
+
+          <a href="#"><div>Terres de la Couronne</div></a>
+
+          <a href="#"><div>Tyrosh</div></a>
+
+          <a href="#"><div>Val d&#39;Arryn</div></a>
+
+          <a href="#"><div>Volantis</div></a>
+        </div>
+        <div class="details details--families">
+          <!-- à dynamiser-->
+          <a href="#"><div>Maison Arryn</div></a>
+
+          <a href="#"><div>Maison Baratheon</div></a>
+
+          <a href="#"><div>Maison Greyjoy</div></a>
+
+          <a href="#"><div>Maison Lannister</div></a>
+
+          <a href="#"><div>Maison Martell</div></a>
+
+          <a href="#"><div>Maison Stark</div></a>
+
+          <a href="#"><div>Maison Targaryen</div></a>
+
+          <a href="#"><div>Maison Tully</div></a>
+
+          <a href="#"><div>Maison Tyrell</div></a>
+        </div>
+        <div class="details details--ajouter">
+          <a href="#"><div>Un royaume</div></a>
+          <a href="#"><div>Une famille</div></a>
+          <a href="#"><div>Un banneret</div></a>
+          <a href="#"><div>Un membre</div></a>
+        </div>
+      </header>
+      <main>
+        <div class="content">
+          <h2>Ajouter un banneret</h2>
+
+          <form method="POST">
+            <div class="form-input">
+              <label for="name">Nom : </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nom de la famille"
+              />
+            </div>
+            <div class="form-input">
+              <label for="family">Famille : </label>
+              <div class="radiogroup">
+                <!-- à dynamiser -->
+                <div class="radioitem">
+                  <input type="radio" id="1" value="1" name="family_id" />
+                  <label for="1">Maison Arryn</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="2" value="2" name="family_id" />
+                  <label for="2">Maison Baratheon</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="3" value="3" name="family_id" />
+                  <label for="3">Maison Greyjoy</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="4" value="4" name="family_id" />
+                  <label for="4">Maison Lannister</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="5" value="5" name="family_id" />
+                  <label for="5">Maison Martell</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="6" value="6" name="family_id" />
+                  <label for="6">Maison Stark</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="7" value="7" name="family_id" />
+                  <label for="7">Maison Targaryen</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="8" value="8" name="family_id" />
+                  <label for="8">Maison Tully</label>
+                </div>
+
+                <div class="radioitem">
+                  <input type="radio" id="9" value="9" name="family_id" />
+                  <label for="9">Maison Tyrell</label>
+                </div>
+              </div>
+            </div>
+            <button class="form-button">Valider</button>
+          </form>
+        </div>
+      </main>
+      <script src="../../js/script.js"></script>
+    </div>
+  </body>
+</html>

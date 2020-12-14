@@ -1,0 +1,15 @@
+:
+CONTINENT: name, image
+SE SITUE, 1n CONTINENT, 11 ROYAUME
+ROYAUME: name, description, image
+
+BANNERET: name
+SERT, 0n FAMILLE, 11 BANNERET
+FAMILLE: name, description, image
+HABITE, 0n ROYAUME, 11 FAMILLE
+
+:
+APPARTIENT A, 1n FAMILLE, 1n MEMBRE
+
+:
+MEMBRE: name
