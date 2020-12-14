@@ -4,7 +4,9 @@ const sequelize = require('../database');
 class Kingdom extends Sequelize.Model {};
 
 Kingdom.init({
-    name: Sequelize.STRING
+    name: Sequelize.STRING,
+    description: Sequelize.STRING,
+    image: Sequelize.STRING,
 }, {
     sequelize,
     tableName: "kingdom"

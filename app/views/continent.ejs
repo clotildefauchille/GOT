@@ -1,94 +1,26 @@
 <%-include ('partials/header')%>
         <div class="content">
           <!-- à dynamiser -->
-          <h2>Westeros</h2>
+          <h2><%=continent.name%></h2>
           <img
             class="continent"
-            src="../images/cartes/westeros.jpg"
-            alt="Carte de Westeros"
+            src="../images/cartes/<%=continent.name.toLowerCase()%>.jpg"
+            alt="Carte de <%=continent.name.toLowerCase()%>"
           />
+
           <div class="cards">
-            <a href="#">
+            <%for(const kingdom of continent.kingdoms){%>
+            <a href="/kingdom/<%=kingdom.id%>">
               <div class="small">
-                <h3>Bief</h3>
+                <h3><%=kingdom.name%></h3>
                 <div class="text--small">
-                  Le Bief, domaine de la maison Tyrell, est la régio...
+                  <%=kingdom.description.slice(1, 60)%>...
                 </div>
               </div>
             </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Conflans</h3>
-                <div class="text--small">
-                  Le Conflans, domaine de la maison Tully de Vivesai...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Dorne</h3>
-                <div class="text--small">
-                  La péninsule de Dorne, domaine de la maison Martel...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Iles de Fer</h3>
-                <div class="text--small">
-                  Les Îles de Fer, domaine de la maison Greyjoy, son...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Nord</h3>
-                <div class="text--small">
-                  Le Nord de Westeros constitue la moitié septentrio...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Terres de l&#39;Orage</h3>
-                <div class="text--small">
-                  Les Terres de l&#39;Orage, domaine de la maison Barath...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Terres de l&#39;Ouest</h3>
-                <div class="text--small">
-                  Les Terres de l&#39;Ouest, domaine de la maison Lannis...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Terres de la Couronne</h3>
-                <div class="text--small">
-                  Les Terres de la Couronne, fief ancestral de la ma...
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="small">
-                <h3>Val d&#39;Arryn</h3>
-                <div class="text--small">
-                  Le Val d&#39;Arryn est une région montagneuse bordée p...
-                </div>
-              </div>
-            </a>
+            <%}%>
           </div>
+
         </div>
   <%-include ('partials/footer')%>
 
