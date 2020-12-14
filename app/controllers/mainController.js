@@ -1,6 +1,16 @@
+const {
+    Continent
+} = require('../models');
+
+
 const mainController={
     home: (req, res)=>{
-res.render ('index');
+        Continent.findAll().then(continents => {
+            console.log(continents);
+            res.render('index', {continents});
+        }).catch(error => {
+            console.log('Error in mainController', error);
+        });
 
     }
 }
