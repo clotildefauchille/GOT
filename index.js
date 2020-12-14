@@ -4,6 +4,7 @@ const express = require('express');
 const router = require('./app/router');
 
 const app = express();
+const menuMiddleware=require('./app/middlewares/menuMiddleware');
 
 const PORT = process.env.PORT || 4000;
 
@@ -12,6 +13,8 @@ app.set('views', './app/views');
 
 app.use(express.static('./public'));
 
+
+app.use(menuMiddleware);
 app.use(router);
 
 app.listen(PORT, () => {
