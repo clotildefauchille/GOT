@@ -1,68 +1,24 @@
 <%-include ('partials/header')%>
 
-        <div class="content">
-          <!-- à dynamiser -->
-          <h2>Maison Baratheon</h2>
-          <div class="family">
-            <img
-              src="../images/blasons/baratheon.png"
-              alt="Blason de la Maison Baratheon"
-              class="blason"
-            />
-            <div class="text">
-              La maison Baratheon est la plus récente des Grandes maisons des
-              Sept Couronnes, et gouverne la région des Terres de l&#39;Orage
-              (The Stormlands). Fondée par le frère bâtard du premier roi
-              Targaryen, Orys Baratheon, son siège se situe à Accalmie
-              (Storm&#39;s End) que gère Renly Baratheon, alors que sa branche
-              royale est à la capitale Port-Réal (King&#39;s Landing) avec
-              Robert Baratheon, et la branche cadette de Stannis Baratheon se
-              tient aussi à Peyredragon (Dragonstone). Son blason est un cerf
-              noir sur champ doré, et sa devise est « Nôtre est la fureur » («
-              Ours is the Fury »). Les bâtards nés dans les terres de
-              l&#39;Orage sont nommés « Storm ». Le blason et la devise des
-              Baratheon dérivent de ceux de la défunte maison Durrandon, la
-              lignée royale des « Rois de l&#39;Orage » qui régnaient sur les
-              Terres de l&#39;Orage jusqu&#39;à l&#39;arrivée des Targaryen,
-              dont Orys Baratheon qui tua le dernier Roi de l&#39;Orage et
-              épousa sa fille, faisant du blason et de la devise des Durrandon
-              ses propriétés.
-            </div>
-          </div>
-          <hr />
-          <h2>Membres de la maison</h2>
-          <div class="cards">
-            <div class="small--very">
-              <h3>Robert Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Cersei Lannister ep. Robert Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Stannis Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Renly Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Joffrey Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Margaery Tyrell ep. Joffrey Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Myrcella Baratheon</h3>
-            </div>
-
-            <div class="small--very">
-              <h3>Tommen Baratheon</h3>
-            </div>
+<div class="content">
+  <!-- à dynamiser -->
+  <h2><%=family.name%></h2>
+  <div class="family">
+    <img src="../images/blasons/<%=family.name.toLowerCase()%>.png" alt="Blason de la <%=family.name%>"
+      class="blason" />
+    <div class="text">
+      <%=family.description%>
+    </div>
+  </div>
+  <hr />
+  <h2>Membres de la maison</h2>
+  <div class="cards">
+    <%for(const member of family.members){%>
+    <div class="small--very">
+      <h3><%=member.name%></h3>
+    </div>
+    <%}%>
+            
           </div>
           <hr />
           <h2>Alliés de la maison</h2>
