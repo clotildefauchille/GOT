@@ -7,20 +7,17 @@ const app = {
 
         for (let menu of menus) {
             menu.addEventListener('mouseover', app.setSubMenu)
-               
-                
-            
         }
     },
 
     setSubMenu: event => {
         //récupérer tous les éléments de la class .details et les cacher
         let subMenus = document.querySelectorAll('.details');
-        
-        for (const subMenuElement of subMenus){
-app.hide(subMenuElement);
+
+        for (const subMenuElement of subMenus) {
+            app.hide(subMenuElement);
         }
-        
+
         const bounds = app.bounds(event.target);
 
         //sélectionner le bon élément en s'aidant de l'object event 
@@ -32,13 +29,13 @@ app.hide(subMenuElement);
         app.show(subMenu);
         //lui ajouter un EventListener sur l'événement mouseleave
         subMenu.addEventListener('mouseleave', () => {
-           app.hide(subMenu) 
+            app.hide(subMenu)
         });
 
         //lorsque cet événement se produit, déclencher une fonction anonyme qui appellera app.hide(subMenu)
-        
+
     },
-    
+
 
     show: element => {
         element.style.opacity = 1;

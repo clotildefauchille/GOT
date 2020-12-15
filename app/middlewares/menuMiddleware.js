@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
         const continents = await Continent.findAll();
         res.locals.continents = continents
 
-        const kingdoms = await Kingdom.findAll();
+        const kingdoms = await Kingdom.findAll({order: ['name']});
         res.locals.kingdoms = kingdoms
 
         const families = await Family.findAll();

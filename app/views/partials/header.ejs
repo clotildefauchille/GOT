@@ -35,8 +35,8 @@
             <div class="details details--kingdoms">
                 <!-- à dynamiser-->
                  <% for (const kingdom of kingdoms) {%>
-                <a href="#">
-                    <div><%=kingdom.name%>></div>
+                <a href="/kingdom/<%=kingdom.id%>">
+                    <div><%=kingdom.name%></div>
                 </a><%}%>
 
                 
@@ -44,8 +44,8 @@
             <div class="details details--families">
                 <!-- à dynamiser-->
                  <% for (const family of families) {%>
-                <a href="#">
-                    <div><%=family.name%>></div>
+                <a href="/family/<%=family.id%>">
+                    <div><%=family.name%></div>
                 </a><%}%>
             </div>
             <div class="details details--ajouter">
