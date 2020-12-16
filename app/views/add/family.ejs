@@ -1,0 +1,60 @@
+
+        <%-include ('../partials/header')%>
+        
+        <%if(locals.error){%>
+          <div class='error'><%=error%></div>
+          <%}%>
+        <div class="content">
+          <h2>Ajouter une famille</h2>
+
+          <form method="POST">
+            <div class="form-input">
+              <label for="name">Nom : </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nom de la famille"
+              />
+            </div>
+
+            
+            <div class="form-input">
+              <label for="description">Description : </label>
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Description de la famille"
+              ></textarea>
+            </div>
+            <div class="form-input">
+              <label for="image">Image : </label>
+              <input
+                type="text"
+                name="image"
+                id="image"
+                placeholder="Nom de l'image"
+              />
+            </div>
+            <div class="form-input">
+              <label for="kingdom">Royaume : </label>
+              
+            <div class="radiogroup">
+                <!-- à dynamiser -->
+                
+                <%for (const kingdom of kingdoms){%>
+                
+                <div class="radioitem">
+                  <input type="radio" id="<%=kingdom.id%>" value="<%=kingdom.id%>" name="kingdom_id" />
+                  <label for="<%=kingdom.id%>"><%=kingdom.name%></label>
+                </div>
+
+               <%}%>
+              </div>
+              
+             
+            </div>
+            <button class="form-button">Valider</button>
+          </form>
+        </div>
+      <%-include ('../partials/footer')%>

@@ -14,4 +14,7 @@ router.get('/family/:id', familyController.familyPage)
 
 router.get('/add/kingdom', kingdomController.addForm);
 router.post('/add/kingdom', kingdomController.handleAddForm);
+
+router.get('/add/family', familyController.addFamily);
+router.post('/add/family', familyController.handleAddForm);
 module.exports = router;
