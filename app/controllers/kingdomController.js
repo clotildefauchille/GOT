@@ -33,12 +33,10 @@ const kingdomController = {
         console.log(req.body);
         try {
             if ((req.body.name === "") || (req.body.description === "") || (req.body.image === "") || (req.body.continent_id === "")) {
-                //    return response.render('signup', {
-                //        error: 'Un utilisateur avec cet email existe déjà'
-                //    });
-                return console.log('error string vide')
-                
-            }
+                   return res.render('add/kingdom', {
+                       error: 'remplir tout les champs pour creer un royaume'
+                   });
+                }
             const newKingdom = await Kingdom.create({
                 name: req.body.name,
                 description: req.body.description,

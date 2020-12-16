@@ -4,6 +4,10 @@
         <div class="content">
           <h2>Ajouter un royaume</h2>
 
+<% if (locals.error) {%>
+<div class="error"><%= error %></div>
+<% } %>
+
           <form method="POST">
             <div class="form-input">
               <label for="name">Nom : </label>
