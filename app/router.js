@@ -4,6 +4,7 @@ const mainController = require('./controllers/mainController');
 const continentController = require('./controllers/continentController');
 const kingdomController = require('./controllers/kingdomController');
 const familyController= require ('./controllers/familyController');
+const banneretController = require('./controllers/banneretController');
 const router = express.Router();
 
 
@@ -17,4 +18,7 @@ router.post('/add/kingdom', kingdomController.handleAddForm);
 
 router.get('/add/family', familyController.addFamily);
 router.post('/add/family', familyController.handleAddForm);
+
+router.get('/add/banneret', banneretController.addForm);
+router.post('/add/banneret', banneretController.handleAddForm);
 module.exports = router;
