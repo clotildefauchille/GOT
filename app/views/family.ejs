@@ -1,0 +1,71 @@
+<%-include ('partials/header')%>
+
+<div class="content">
+  <!-- à dynamiser -->
+  <h2><%=family.name%></h2>
+  <div class="family">
+    <img src="../images/blasons/<%=family.name.slice(7).toLowerCase()%>.png" alt="Blason de la <%=family.name%>"
+      class="blason" />
+    <div class="text">
+      <%=family.description%>
+    </div>
+  </div>
+  <hr />
+  <h2>Membres de la maison</h2>
+  <div class="cards">
+    <%for(const member of family.members){%>
+    <div class="small--very">
+      <h3><%=member.name%></h3>
+    </div>
+    <%}%>
+            
+          </div>
+          <hr />
+          <h2>Alliés de la maison</h2>
+          <div class="cards">
+            <div class="small--very">
+              <h3>Maison Buckler</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Caron</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Dondarrion</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Estremont</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Connington</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Mervault</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Morrigen</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Selmy</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Staedmon</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Swann</h3>
+            </div>
+
+            <div class="small--very">
+              <h3>Maison Torth</h3>
+            </div>
+          </div>
+        </div>
+<%-include ('partials/footer')%>

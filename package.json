@@ -1,0 +1,30 @@
+{
+  "name": "s05-projet-GOT-clotildefauchille",
+  "version": "1.0.0",
+  "description": "- mettre en place express et ses amis - préparer les dossiers nécessaires à l'application (dossier app, dossier app/controllers, ...) - ajouter un mainController pour le rendu de l'index - afficher l'index sous la forme d'une vue EJS - vérifier sur l'onglet network que toutes les ressources sont bien chargées",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Nemo/s05-projet-GOT-clotildefauchille.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Nemo/s05-projet-GOT-clotildefauchille/issues"
+  },
+  "homepage": "https://github.com/O-clock-Nemo/s05-projet-GOT-clotildefauchille#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  }
+}

@@ -1,0 +1,34 @@
+
+         <%-include ('../partials/header')%>
+        
+        <div class="content">
+          <h2>Ajouter un banneret</h2>
+
+          <form method="POST" >
+            <div class="form-input">
+              <label for="name">Nom : </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nom de la famille"
+              />
+            </div>
+            <div class="form-input">
+              <label for="family">Famille : </label>
+              <div class="radiogroup">
+                <!-- à dynamiser -->
+                
+                <%for (const banneret of bannerets){%>
+                <div class="radioitem">
+                  <input type="radio" id="<%=banneret.family.id%>" value="<%=banneret.family.id%>" name="family_id" />
+                  <label for="<%=banneret.family.id%>"><%=banneret.name%></label>
+                </div>
+<%}%>
+               
+              </div>
+            </div>
+            <button class="form-button">Valider</button>
+          </form>
+        </div>
+    <%-include ('../partials/footer')%>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Game of Thrones</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="/">
+                <img src="../images/logo.png" alt="Trône de fer" class="logo" />
+            </a>
+            <ul>
+
+                <li class="menu" id="continents"> Continents </li>
+
+                <li class="menu" id="kingdoms">Royaumes</li>
+                <li class="menu" id="families">Familles</li>
+                <li class="menu" id="ajouter">Ajouter...</li>
+            </ul>
+            <div class="details details--continents">
+                <!-- à dynamiser-->
+                <% for (const continent of continents) {%>
+                <a href="/continent/<%=continent.id%>">
+                    <div><%=continent.name%></div>
+                </a><%}%>
+               
+            </div>
+            <div class="details details--kingdoms">
+                <!-- à dynamiser-->
+                 <% for (const kingdom of kingdoms) {%>
+                <a href="/kingdom/<%=kingdom.id%>">
+                    <div><%=kingdom.name%></div>
+                </a><%}%>
+
+                
+            </div>
+            <div class="details details--families">
+                <!-- à dynamiser-->
+                 <% for (const family of families) {%>
+                <a href="/family/<%=family.id%>">
+                    <div><%=family.name%></div>
+                </a><%}%>
+            </div>
+            <div class="details details--ajouter">
+                <a href="/add/kingdom">
+                    <div>Un royaume</div>
+                </a>
+                <a href="/add/family">
+                    <div>Une famille</div>
+                </a>
+                <a href="/add/banneret">
+                    <div>Un banneret</div>
+                </a>
+                <a href="#">
+                    <div>Un membre</div>
+                </a>
+            </div>
+        </header>
+        <main>

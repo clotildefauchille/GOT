@@ -1,0 +1,26 @@
+<%-include ('partials/header')%>
+        <div class="content">
+          <!-- à dynamiser -->
+          <h2><%=continent.name%></h2>
+          <img
+            class="continent"
+            src="../images/cartes/<%=continent.name.toLowerCase()%>.jpg"
+            alt="Carte de <%=continent.name.toLowerCase()%>"
+          />
+
+          <div class="cards">
+            <%for(const kingdom of continent.kingdoms){%>
+            <a href="/kingdom/<%=kingdom.id%>">
+              <div class="small">
+                <h3><%=kingdom.name%></h3>
+                <div class="text--small">
+                  <%=kingdom.description.slice(1, 60)%>...
+                </div>
+              </div>
+            </a>
+            <%}%>
+          </div>
+
+        </div>
+  <%-include ('partials/footer')%>
+
